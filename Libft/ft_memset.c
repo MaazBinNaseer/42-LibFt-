@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 11:55:11 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/19 15:55:38 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/20 12:25:04 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ void *ft_memset(void *str, int num, size_t length)
     return (str);
 }
 
-int main()
-{
-    char myarray[50] = "Welcome to world of 42";
-    printf("Before: %s\n", myarray);
-    ft_memset(myarray + 2 , 'w', 10*sizeof(char));
-    printf("After: %s\n", myarray);
-    return (0);
-}
+// int main()
+// {
+//     char myarray[50] = "Welcome to world of 42";
+//     printf("Before: %s\n", myarray);
+//     ft_memset(myarray + 2 , 'w', 10*sizeof(char));
+//     printf("After: %s\n", myarray);
+//     return (0);
+// }

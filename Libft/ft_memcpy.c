@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 16:08:27 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/19 17:05:39 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/20 12:23:19 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,23 +23,27 @@ RETURN VALUES
 
 void *ft_memcpy(void *dst, const void *src, size_t num)
 {
-    size_t y; 
+    size_t i;
+    char *csrc;
+    char *cdest; 
 
-    y = 0;
-    while (y < num)
+    csrc = (char *)src;
+    cdest = (char *)dst;
+    i = 0; 
+    while (i < num)
     {
-        *(unsigned char*)(dst + y) = (unsigned char)(src + y);
-        y++;
-    }
-    return (dst); 
+        cdest[i] = (unsigned char)csrc[i]; 
+        i++;
+    } 
+    return (cdest); 
 }
 
-int main()
-{
-    char mystring[50] = "YELLLO TO FUN WORLD BABY!!!!!!!";
-    char dst[50] = "HELLO LADIES, ITS JOHNNY!";
-    printf("Before: %s\n", dst);
-    ft_memcpy(dst, mystring, sizeof(mystring));
-    printf("After: %s\n", dst);
-    return(0);
-}
+// int main()
+// {
+//     char mystring[50] = "YELLLO TO FUN WORLD BABY!!!!!!!";
+//     char dst[50] = "HELLO LADIES, ITS JOHNNY!";
+//     printf("Before: %s\n", dst);
+//     ft_memcpy(dst, mystring, 30);
+//     printf("After: %s\n", dst);
+//     return(0);
+// }

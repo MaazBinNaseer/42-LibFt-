@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 12:21:06 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/19 16:08:55 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/20 16:02:20 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 /*-------CONVERSIONS------*/
 int ft_toupper(int a);
 int ft_tolower(int b);
+
+/*-------MATHS----------*/
 int ft_isdigit(int c);
 int ft_isalpha(int d);
 int ft_isalnum(int e);
@@ -27,9 +29,12 @@ int ft_isprint(int g);
 
 /*--------STRINGS-------*/
 size_t ft_strlen(const char *c);
+int ft_strncmp(const char *s1, const char *s2, size_t num);
 
 /*-------MEMORY--------*/
 void *ft_memset(void *str, int num, size_t length);
+void *ft_memcpy(void *dest, const void *src, size_t length);
+int ft_memcmp(const void *str1, const void *str2, size_t num);
 
 /*------RESETTOZERO----*/
 void ft_bzero(void *str, size_t number);
