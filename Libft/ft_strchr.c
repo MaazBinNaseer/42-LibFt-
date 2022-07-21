@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 16:08:39 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/20 17:47:38 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/21 14:29:14 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,21 +29,25 @@ RETURN VALUES
 
 char *ft_strchr(const char *str, int c)
 {
-    unsigned char ch = c; 
-    
+    unsigned char ch = c;
+        
     while(*str && (unsigned char)*str != ch)
         str++; 
-    return (char *)(ch == (unsigned char)*str ? str: NULL);
-}
 
-int main()
-{
-    const char string[] = "The string is wow"; 
-    int x = '5'; 
-    char *p; 
+    if(ch == (unsigned char)*str)
+        return (char *)str;
+    else
+        return NULL;
+ }
 
-    p = ft_strchr(string, x); 
-    printf("String starting from %c is: %s\n", '5', p);
-    return (0);
+// int main()
+// {
+//     const char string[] = "The string is wow"; 
+//     int x = 'w'; 
+//     const char *p; 
+
+//     p = ft_strchr(string, x); 
+//     printf("String starting from %c is: %s\n", x, p);
+//     return (0);
     
-}
+// }

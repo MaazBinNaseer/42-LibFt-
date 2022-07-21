@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 12:21:06 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/20 16:02:20 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/21 15:20:25 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ int ft_isprint(int g);
 /*--------STRINGS-------*/
 size_t ft_strlen(const char *c);
 int ft_strncmp(const char *s1, const char *s2, size_t num);
+char *ft_strchr(const char *str, int c);
+char *ft_strrchr(const char *str, int c)
+
 
 /*-------MEMORY--------*/
 void *ft_memset(void *str, int num, size_t length);
