@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 15:00:57 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/21 15:40:47 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/21 16:46:41 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,18 +28,41 @@ RETURN VALUES
 char *ft_strnstr(const char *str1, const char *str2, size_t len)
 {   
     size_t i; 
-
-    i = 0; 
-    while(i < len)
-    {
-        
-    }
-       
+    size_t m;
     
+    i = 0;
+    m = 0;
+    while (i < len && len != 0)
+    { 
+        while (*str1)
+        {
+            if (*str1 == *str2)
+            {
+                i = 0;
+                m = 0;
+                while(str2[i] != '\0')
+                {
+                    if(str1[i] != str2[i])
+                        m++;
+                        i++;                
+                }
+               if(m == 0)
+                return (char *)str1; 
+            }
+        str1++;
+        }
+    }
+     return (char *)str1;
 }
 
 
 int main()
 {
+    const char *largestring = "Foo Bar Baz";
+    const char *smallstring = "Bar";
+    char *ptr;
+
+    ptr = ft_strnstr(largestring, smallstring, 10);
+    printf("Returning the string: %s", ptr);
     
 }
