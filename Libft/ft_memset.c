@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 11:55:11 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/20 12:25:04 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/25 15:52:53 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void *ft_memset(void *str, int num, size_t length)
     size_t move; 
     
     move = 0;
-    if(!str)
+    if(!str && !num)
         return (NULL);
     while(move < length)
     {

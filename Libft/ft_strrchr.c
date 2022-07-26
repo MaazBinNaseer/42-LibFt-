@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 12:51:59 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/21 15:02:43 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/26 18:46:49 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@
 #include <stdio.h>
 #include <string.h>
 
+
 char *ft_strrchr(const char *str, int c)
 {
-    unsigned char ch = c; 
+    int i; 
     
-    if(!str || !c)
-        return (NULL); 
-    while (*str)
-        str++;
-    str--;
-    while((*str) && (char)*str != ch)
-        str--;
-    if(ch == (unsigned char)*str)
-        return ((char *)str);
-    else 
-        return (NULL);
+    i = 0;
+    while(str[i])
+        i++;
+    while(i >= 0)
+    {
+        if(str[i] == (char)c)
+            return((char *)&str[i]);
+        i--;
+    }    
+    return(0); 
 }
 
 int main()

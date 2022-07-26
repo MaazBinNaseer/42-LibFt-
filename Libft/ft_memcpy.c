@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 16:08:27 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/20 12:23:19 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/25 15:49:38 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ void *ft_memcpy(void *dst, const void *src, size_t num)
     size_t i;
     char *csrc;
     char *cdest; 
-
+    
+    if(!src && !dst)
+        return (NULL); 
     csrc = (char *)src;
     cdest = (char *)dst;
     i = 0; 

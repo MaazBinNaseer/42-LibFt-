@@ -6,80 +6,51 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 12:37:46 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/21 11:56:15 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/25 15:23:38 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 #include <stdio.h>
 #include <string.h>
 
-unsigned int ft_strlen(char *str)
+size_t ft_strlcat(char *dest, const char *src,  size_t destsize)
 {
-	unsigned int counter; 
-
-	counter = 0;
-	while (*str != '\0')
+	size_t d_len; 
+	size_t s_len; 
+	size_t offset; 
+	size_t i; 
+	
+	d_len = ft_strlen(dest);
+	s_len = ft_strlen(src);
+	offset = d_len;
+	i = 0; 
+	
+	if(d_len >= destsize)
+			return (s_len + destsize);
+	if(d_len < destsize - 1 && destsize > 0)
 	{
-		counter++;
-		str++;
+	  	while(*(src + i) != '\0' && (d_len + 1 < destsize - 1))
+		{
+			*(dest+offset) = *(src + i);
+			offset++;
+			i++;	
+			if(offset == (destsize - 1))
+				break;
+		}
 	}
-	return (counter);
-}
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
-{
-	unsigned int c;
-	unsigned int d;
-
-	if (size <= ft_strlen(dest))
-		return (size + ft_strlen(src));
-	c = ft_strlen(dest);
-	d = 0;
-	while (src[d] != '\0' && c + 1 < size)
-	{
-		dest[c] = src[d];
-		c++;
-		d++;
-	}
-	dest[c] = '\0';
-	return (ft_strlen(dest) + ft_strlen(&src[d]));
+	*(dest+offset)='\0';
+	return (d_len + s_len);
 }
 
-int main()
-{
-	//char str1[50]; 
-	//char str2[50];
-	//char str3[] = "Connect together";	
-	char dest[20] = "12";
-	char src[]= "456790";
-	unsigned int size = 6;
-	unsigned int result;
-	unsigned int result2;
-	//unsigned int tam;
-	//unsigned int tam2;
-	
-	printf("------\ndest = %s\nsrc = %s\nnb = %d\n", dest, src, size);
-	result = ft_strlcat(dest, src, size); 
-	result2 = strlcat(dest,src, size);
-	/*str1[0] = 'W';
-	str1[1] = 'O';
-	str1[2] = 'W';
-	str1[3] = '\0';
+// int main()
+// {
+// 	char src[] = "Welcome home"; 
+// 	char dest[]= "twenty four";
 
-	str2[0] = 'C';
-	str2[1] = 'O';
-	str2[2] = 'N';
-	str2[3]	= '\0';
-
-	tam = ft_strlcat(str1, str3, 0);
-	tam2 = ft_strlcat(str2, str3, 0);
-
-	printf("String final: %s, Tam: %d\n", str1, tam);
-	printf("String final: %s, Tam2: %d\n", str2, tam2);*/ 
-	printf("dest (cat) = %s\nresult = %d\n-----\n", dest, result);
-	printf("dest (cat) = %s\nresult = %d\n-----\n", dest, result2);
+// 	printf("Dest Before: %s\n", dest);
+// 	printf("Dest after : %zu\n", ft_strlcat(dest, src, 40));
+// 	// printf("Dest after : %zu\n", strlcat(dest, src, 40));
 	
-	
-//printf("This string you are compiling is: %u", ft_strlcat(dest, str, n));
-			return 0;
-}
+// 	return 0;
+// }

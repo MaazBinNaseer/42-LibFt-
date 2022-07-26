@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 15:18:35 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/19 12:39:21 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/25 16:57:39 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,11 @@ RETURN VALUES
 #include "libft.h"
 #include <stdio.h>
 
-int ft_isprint (int value)
+int ft_isprint (int c)
 {
-    return(value >= 32 && value <= 127);
+     if(c <= 126 && c >= 32)
+          return (1);
+     return(0);
 }
 
 // int main()

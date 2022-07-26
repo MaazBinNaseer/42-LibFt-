@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 15:00:57 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/21 16:46:41 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/25 15:23:50 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char *ft_strnstr(const char *str1, const char *str2, size_t len)
     
     i = 0;
     m = 0;
+    if(!len || !str1 || !str2 || i > len)
+        return (NULL);
     while (i < len && len != 0)
     { 
         while (*str1)
@@ -43,8 +45,12 @@ char *ft_strnstr(const char *str1, const char *str2, size_t len)
                 while(str2[i] != '\0')
                 {
                     if(str1[i] != str2[i])
+                    {
                         m++;
-                        i++;                
+                        i++;
+                    }
+                    else 
+                        return (0);                 
                 }
                if(m == 0)
                 return (char *)str1; 
@@ -56,13 +62,14 @@ char *ft_strnstr(const char *str1, const char *str2, size_t len)
 }
 
 
-int main()
-{
-    const char *largestring = "Foo Bar Baz";
-    const char *smallstring = "Bar";
-    char *ptr;
+// int main()
+// {
+//     const char *largestring = "Foo Bar Baz";
+//     const char *smallstring = "A";
+//     char *ptr;
 
-    ptr = ft_strnstr(largestring, smallstring, 10);
-    printf("Returning the string: %s", ptr);
+//     ptr = ft_strnstr(largestring, smallstring, 3);
+//     printf("Returning the string: %s", ptr);
+//     return (0);
     
-}
+// }

@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/20 13:27:02 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/20 16:08:49 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/26 18:46:44 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,27 +31,24 @@ int ft_memcmp(const void *str1, const void *str2, size_t num)
      unsigned char *a; 
      unsigned char *b;
     int CompareValue; 
-
+    
     CompareValue = 0;
     a = (unsigned char *)str1;
     b = (unsigned char *)str2; 
     
-    if((str1 == str2) || (!str1 || !str2))
+    if((a == b) || (!a && !b) || !num)
         return (CompareValue); 
     while (num > 0)
     {
         if(*a != *b)
         {
-            if(*a > *b)
-             return (CompareValue = -1); 
-            else 
-             return (CompareValue = 1);
+             return (*a - *b); 
         }
         num--; 
         a++;
         b++;
     }
-    return (CompareValue);
+    return (0);
 }
 
 // int main()
