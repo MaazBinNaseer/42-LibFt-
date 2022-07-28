@@ -12,23 +12,23 @@
 
 /*
 DESCRIPTION
-     The bzero() function writes n zeroed bytes to the string s.  If n is zero, bzero() does
+     The bzero() function writes n zeroed bytes to the string s.  If n is zero,
+	bzero() does
      nothing.
 */
 #include "libft.h"
 #include <stdio.h>
 
-void ft_bzero(void *str, size_t num)
+void	ft_bzero(void *str, size_t num)
 {
-    size_t x; 
-    
-    x = 0;
-    while (x < num)
-    {
-        *(char*)(str + x) = 0;
-        x++;
-    }
-    
+	size_t	x;
+
+	x = 0;
+	while (x < num)
+	{
+		*(char *)(str + x) = 0;
+		x++;
+	}
 }
 
 // int main()
@@ -37,5 +37,5 @@ void ft_bzero(void *str, size_t num)
 //     printf("I am printing a string: %s\n", str);
 //     ft_bzero(str, 6);
 //     printf("I am printing a string: %c\n", str[5]);
-//     return (0); 
+//     return (0);
 // }

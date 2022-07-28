@@ -6,7 +6,7 @@
 #    By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/07/25 12:56:27 by mbin-nas          #+#    #+#              #
-#    Updated: 2022/07/26 18:04:49 by mbin-nas         ###   ########.fr        #
+#    Updated: 2022/07/27 16:00:58 by mbin-nas         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,5 +32,7 @@ $(NAME): $(OBJECTS)
 #clearing out all the .O files 
 clean: 
 	rm -rf $(NAME) $(OBJECTS)
-
+fclean: clean 
+	rm -rf $(NAME)
+	
 re: clean all 

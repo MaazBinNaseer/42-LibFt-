@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/18 14:55:13 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/27 14:52:58 by mbin-nas         ###   ########.fr       */
+/*   Created: 2022/07/27 12:55:51 by mbin-nas          #+#    #+#             */
+/*   Updated: 2022/07/27 15:04:33 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-DESCRIPTION
-     The isascii() function tests for an ASCII character,
-	which is any character between 0
-     and octal 0177 inclusive.
-
-*/
 #include "libft.h"
 #include <stdio.h>
 
-int	ft_isascii(int ditto)
+char	*ft_strdup(const char *src)
 {
-	return (ditto >= 0 && ditto <= 127);
+	char	*ptr;
+	size_t	len;
+	char	*dest;
+
+	ptr = (char *)src;
+	len = ft_strlen(ptr) + 1;
+	dest = malloc(len * sizeof(char));
+	if (!dest)
+		return (NULL);
+	ft_memcpy(dest, src, len);
+	return (dest);
 }

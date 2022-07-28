@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 13:36:29 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/26 18:46:25 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/28 14:23:38 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,13 @@ RETURN VALUES
      is an error, they return a NULL pointer and set errno to ENOMEM.qq
 */
 #include "libft.h"
-#include <stdio.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	char	*ptr;
+	void	*ptr;
 
-	// if ((count*size >= SIZE_MAX || count*size <= -SIZE_MAX- 1))
-	//     return (NULL);
 	ptr = malloc(count * size);
-	if (!ptr)
+	if (!ptr || (size > size * count))
 		return (NULL);
 	ft_bzero(ptr, count * size);
 	return (ptr);

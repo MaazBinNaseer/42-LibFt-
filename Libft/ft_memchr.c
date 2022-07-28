@@ -13,31 +13,33 @@
 #include "libft.h"
 #include <stdio.h>
 
-void *ft_memchr(const void *str, int c, size_t numb)
+void	*ft_memchr(const void *str, int c, size_t numb)
 {
-    unsigned char ch = c; 
-    unsigned char *ms = (unsigned char *)str;
-    size_t i; 
-    
-    i = 0;
-   while (i < numb)
-    {       
-        if((unsigned char)*ms == ch)
-            return (char*)ms; 
-        i++;
-        ms++;
-    }
-    return (NULL); 
+	unsigned char	ch;
+	unsigned char	*ms;
+	size_t			i;
+
+	ch = c;
+	ms = (unsigned char *)str;
+	i = 0;
+	while (i < numb)
+	{
+		if ((unsigned char)*ms == ch)
+			return ((char *)ms);
+		i++;
+		ms++;
+	}
+	return (NULL);
 }
 
 // int main()
-// {  
-//      const char string[] = "The string is wow"; 
-//     int x = 't'; 
-//     const char *p; 
+// {
+//      const char string[] = "The string is wow";
+//     int x = 't';
+//     const char *p;
 
-//     p = ft_memchr(string, x, 3); 
+//     p = ft_memchr(string, x, 3);
 //     printf("String starting from %c is: %s\n", x, p);
 //     return (0);
-    
+
 // }

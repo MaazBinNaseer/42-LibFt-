@@ -6,13 +6,14 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 11:55:11 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/25 15:52:53 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/07/27 14:57:40 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 DESCRIPTION
-     The memset() function writes len bytes of value c (converted to an unsigned char) to the string b.
+     The memset() function writes len bytes of value c 
+	 (converted to an unsigned char) to the string b.
 
 RETURN VALUES
      The memset() function returns its first argument.
@@ -20,19 +21,19 @@ RETURN VALUES
 #include "libft.h"
 #include <stdio.h>
 
-void *ft_memset(void *str, int num, size_t length)
+void	*ft_memset(void *str, int num, size_t length)
 {
-    size_t move; 
-    
-    move = 0;
-    if(!str && !num)
-        return (NULL);
-    while(move < length)
-    {
-        *(unsigned char*)(str + move) = (unsigned char)num;
-        move++;
-    }
-    return (str);
+	size_t	move;
+
+	move = 0;
+	if (!str && !num)
+		return (NULL);
+	while (move < length)
+	{
+		*(unsigned char *)(str + move) = (unsigned char)num;
+		move++;
+	}
+	return (str);
 }
 
 // int main()
