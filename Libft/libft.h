@@ -21,6 +21,7 @@
 int		ft_toupper(int a);
 int		ft_tolower(int b);
 int		ft_atoi(const char *str);
+char    *ft_itoa(int n);
 
 /*-------MATHS----------*/
 int		ft_isdigit(int c);
@@ -30,7 +31,7 @@ int		ft_isascii(int f);
 int		ft_isprint(int g);
 
 /*--------------------------------STRINGS-------------------------------*/
-size_t	ft_strlen(const char *c);
+size_t  ft_strlen(char const *c);
 int		ft_strncmp(const char *s1, const char *s2, size_t num);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
@@ -38,6 +39,12 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size);
 char	*ft_strdup(const char *src);
 size_t	ft_strlcat(char *dest, const char *src, size_t destsize);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+void    ft_putchar_fd(char c, int fd);
+void    ft_putstr_fd(char *str, int fd);
+char    *ft_strtrim(char const *str1, char const *str2);
+char    *ft_strjoin(char const *str1, char const *str2);
+char *ft_strmapi(char const *str, char (*f)(unsigned int, char));
+
 
 /*----------------------------MEMORY-----------------------------*/
 void	*ft_memset(void *str, int num, size_t length);
