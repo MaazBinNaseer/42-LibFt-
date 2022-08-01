@@ -1,69 +1,62 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/08/01 13:47:43 by mbin-nas          #+#    #+#             */
+/*   Updated: 2022/08/01 13:47:43 by mbin-nas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-//Whitespcaes 
-int whitespace(int c)
+char	ft_readchar(char c, char const *str)
 {
-    return(c == ' ' || c == '\t' || c == '\n');
+	size_t	i;
+
+	i = 0;
+	while (str[i])
+	{
+		if (str[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
 }
 
-//getting first position of character
-int first_position(char const *str)
+char	*ft_strtrim(char const *str1, char const *str2)
 {
-    int i = 0;
-    while(whitespace(str[i]))
-        i++;
-    return (i);
+	char	*str;
+	size_t	i;
+	size_t	starting;
+	size_t	ending;
+
+	if (!str1 || !str2)
+		return (0);
+	starting = 0;
+	while (str1[starting] && ft_readchar(str1[starting], str2))
+		starting++;
+	ending = ft_strlen(str1);
+	while (ending > starting && ft_readchar(str1[ending - 1], str2))
+		ending--;
+	str = (char *)malloc(sizeof(*str1) * (ending - starting + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (starting < ending)
+		str[i++] = str1[starting++];
+	str[i] = 0;
+	return (str);
 }
 
-//get last poisition of the string 
-int last_position(char const *str)
-{
-    int i = ft_strlen(str) - 1;
-    while(whitespace(str[i]))
-        i--;
-    return(i);
-}
+// int main()
+// {
+//     char *str1 = "l      l";
+//     char *str2 = "l";
 
-//getting the trim length 
-int trim_length(char const *str)
-{
-    return (last_position(str) - first_position(str));
-}
+//     printf("%s\n", ft_strtrim(str1, str2));
+//     return (0);
 
-//Returning the string to the new destination 
-char *ft_strtrim(char const *str1, char const *str2)
-{
-    int i;
-    int len;
-    int start; 
-   unsigned char *ptr2 = (unsigned char *)str2;
-
-    if(str1 != NULL)
-    {
-        i = 0;
-        len = trim_length(str1) + 1; 
-        ptr2 = (unsigned char *)malloc(len); 
-        start = first_position(str1);
-    }
-
-    while(i < len)
-    {
-       ptr2[i] = str1[start];
-        i++; 
-        start++;
-    }
-
-    ptr2[i] = '\0'; 
-
-    return ((char *)ptr2);
-}
-
-int main()
-{
-    char *str1 = "      Hello World  !  ";
-    char *str2 = "";
-
-    printf("%s\n", ft_strtrim(str1, str2));
-    return 0;
-
-}
+// }

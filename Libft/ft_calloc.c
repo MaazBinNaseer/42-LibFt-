@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 13:36:29 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/28 14:23:38 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/08/01 15:58:49 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,10 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
+	if (size && count > SIZE_MAX / size)
+		return (NULL);
 	ptr = malloc(count * size);
-	if (!ptr || (size > size * count))
+	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, count * size);
 	return (ptr);
