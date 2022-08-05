@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/28 15:21:39 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/08/01 16:36:58 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/08/04 17:41:48 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ char	*ft_substr(char const *string, unsigned int start, size_t len)
 	c = 0;
 	if (!string)
 		return (NULL);
+	if (len > ft_strlen(string))
+		len = ft_strlen(string);
+	if (start >= ft_strlen(string))
+		len = 0;
 	dest = malloc(sizeof(char) * (len + 1));
 	if (!dest)
 		return (NULL);
-	if (start >= ft_strlen(string))
-		len = 0;
-	if (len > ft_strlen(string))
-		len = ft_strlen(string);
 	while (c < (int)len)
 	{
 		*(dest + c) = *(string + start);

@@ -38,7 +38,7 @@ void	ft_putnbr_fd(int number, int fd)
 	{
 		ft_putchar_fd(number + 48, fd);
 	}
-}       
+}
 // #include <fcntl.h>
 
 // int main()

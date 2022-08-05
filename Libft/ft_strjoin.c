@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 13:47:16 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/08/01 13:47:19 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/08/04 18:04:27 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *str1, char const *str2)
 	size_t	i;
 	size_t	j;
 
-	if (!str1 && !str2)
+	if (!str1 || !str2)
 		return (NULL);
 	result = malloc(sizeof(char) * (ft_strlen(str1) + ft_strlen(str2) + 1));
 	if (!result)

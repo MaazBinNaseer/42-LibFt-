@@ -6,12 +6,11 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/01 15:39:07 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/27 15:24:50 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/08/03 14:40:55 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {

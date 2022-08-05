@@ -6,7 +6,7 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 12:08:13 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/07/25 15:36:50 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/08/03 14:40:58 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ DESCRIPTION
      nothing.
 */
 #include "libft.h"
-#include <stdio.h>
 
 void	ft_bzero(void *str, size_t num)
 {
