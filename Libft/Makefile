@@ -14,7 +14,7 @@
 NAME= libft.a 
 
 #DECLARED VARIABLES  
-CFILES= ft_putchar_fd.c         ft_strmapi.c			ft_putendl_fd.c \
+CFILES= 	ft_putchar_fd.c         ft_strmapi.c		ft_putendl_fd.c \
 		ft_atoi.c               ft_strncmp.c		ft_strnstr.c \
 		ft_bzero.c              ft_putnbr_fd.c          ft_strrchr.c \
 		ft_calloc.c             ft_putstr_fd.c          ft_strtrim.c \
