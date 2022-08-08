@@ -6,17 +6,17 @@
 /*   By: mbin-nas <mbin-nas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 17:32:35 by mbin-nas          #+#    #+#             */
-/*   Updated: 2022/08/03 17:40:00 by mbin-nas         ###   ########.fr       */
+/*   Updated: 2022/08/08 14:09:44 by mbin-nas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
-    if(!lst)
-        return (0);
-    while(lst->next)
-        lst = lst->next;
-    return (lst);
+	if (!lst)
+		return (0);
+	while (lst->next)
+		lst = lst->next;
+	return (lst);
 }
