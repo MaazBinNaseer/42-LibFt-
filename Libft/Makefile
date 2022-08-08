@@ -15,7 +15,7 @@ NAME= libft.a
 
 #DECLARED VARIABLES  
 CFILES= ft_putchar_fd.c         ft_strmapi.c			ft_putendl_fd.c \
-		ft_atoi.c               ft_strncmp.c			ft_strnstr.c \
+		ft_atoi.c               ft_strncmp.c		ft_strnstr.c \
 		ft_bzero.c              ft_putnbr_fd.c          ft_strrchr.c \
 		ft_calloc.c             ft_putstr_fd.c          ft_strtrim.c \
 		ft_isalnum.c            ft_split.c              ft_substr.c \
@@ -23,8 +23,8 @@ CFILES= ft_putchar_fd.c         ft_strmapi.c			ft_putendl_fd.c \
 		ft_isascii.c            ft_strdup.c             ft_striteri.c \
 		ft_isdigit.c            ft_memchr.c             ft_toupper.c \
 		ft_isprint.c            ft_memcmp.c             ft_strjoin.c \
-		ft_memmove.c            ft_strlcpy.c			ft_itoa.c \
-		ft_memset.c             ft_strlen.c				ft_strlcat.c \
+		ft_memmove.c            ft_strlcpy.c		ft_itoa.c \
+		ft_memset.c             ft_strlen.c		ft_strlcat.c \
 		ft_memcpy.c             
 		
 OBJECTS= $(CFILES:.c=.o)
