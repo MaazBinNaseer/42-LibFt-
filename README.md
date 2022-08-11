@@ -1,7 +1,7 @@
 # 42-LibFt-
 ## Creating our own library folder from start
 
-| S.No | Function | Description | 
+| S.No | **Function** | **Description** | 
 |------|----------|-------------|
 | 1.| [isAlnum](Libft/ft_isalnum.c) | Checks whether the string has alphabets and numbers; if true returns 1|
 | 2.| [isAlpha](Libft/ft_isalpha.c) | Read the string: If there is alphabets- it should return the value of 1 |
