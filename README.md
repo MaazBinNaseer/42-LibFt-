@@ -42,8 +42,11 @@
 
 ---
 ### BONUS PART 
-
-
+| S.No | **Function** | **Description** | 
+|------|----------|-------------|
+|36. | [Lstnew](Libft/ft_lstnew.c)| Allocates a new node and variable next is initialized to Null| 
+|37.| [Lstadd_front](Libft/ft_lstadd_front.c)| Adds the node new at the beginning of the list | 
+|38.| [Lstsize](Libft/ft_lstsize.c)| Counts the number of nodes in a list | 
 
 
 
