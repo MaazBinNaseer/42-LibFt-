@@ -54,6 +54,65 @@
 |43.| [lstiter](Libft/ft_lstiter.c)| Iterates the list list and applies the function f on the content of each node. 
 |44.| [lstmap](Libft/ft_lstmap.c)| Creates a new list and applies the function of the f on the content of each node. The del function is used to delete the content of a node if needed.|
 
+--- 
+## THINGS TO READ ABOUT 
 
+### MAKEFILE
+
+<p align="center">
+<img src= "https://user-images.githubusercontent.com/88405217/184244154-60f36c2b-ecb4-4c91-8044-2444367b03a8.jpg">
+</p>
+
+```C
+//Generating an .O file 
+clang/gcc -c file.c 
+//Compressing all files together 
+clang/gcc file1.o fil2.o -o file -l m 
+```
+## Understanding wildcards & phony
+
+A single file name can specify many files using *wildcard characters*. The wildcard characters in `make` are ‘*’, ‘?’ and ‘[…]’, the same as in the Bourne shell. ***For example,*** *.c specifies a list of all the files (in the working directory) whose names end in ‘.c’.
+
+The character ‘~’ at the beginning of a file name also has special significance. If alone, or followed by a slash, it represents your home directory. For example ~/bin expands to /home/you/bin. If the ‘~’ is followed by a word, the string represents the home directory of the user named by that word. For example ~john/bin expands to /home/john/bin. On systems which don’t have a home directory for each user (such as MS-DOS or MS-Windows), this functionality can be simulated by setting the environment variable *HOME*
+
+## Wildcard examples
+To set `objects`to the expansion, instead use:
+
+```C
+`**objects := $(wildcard *.o)
+
+Some Wildcard Syntax:
+$@ : The filename representing the target.
+$^: the filenames of all the prerequisites, separated by spaces. 
+This list has duplicate filenames removed since for most uses, such as compiling, copying, etc., duplicates are not wanted.
+
+%.o:%.c -----> $(CC) $*(CFLAGS) -c -o ($@):targets %.o ($^):targets %.c
+```
+### Phony
+
+A phony target is one that is not really the name of a file; rather it is just a name for a recipe to be executed when you make an explicit request. **There are two reasons to use a phony target: to avoid a conflict with a file of the same name, and to improve performance**
+
+## Writing Rules in MakeFiles
+
+c
+
+Create the archive. The specified archive is always created if it did not exist, when you request an update. But a warning is issued unless you specify in advance that you expect to create it, by using this modifier.
+
+r
+
+Insert the files *member*... into archive (with replacement). This operation differs from q in that any previously existing members are deleted if their names match those being added.
+
+s
+
+Write an object-file index into the archive, or update an existing one, even if no other change is made to the archive. You may use this modifier flag either with any operation, or alone. Running "`ar s`" on an archive is equivalent to running [ranlib](http://unixhelp.ed.ac.uk/CGI/man-cgi?ranlib%201) on it.
+Therefore, `rcs`can be seen to mean `replace, create, sort
+
+```C
+CFILES= $(wildcard ./*.c) //Gets all the .c files in the directory and stores it into the variable called CFILES //
+$(NAME): $(OBJECTS)
+	ar -rcs $(NAME) $(OBJECTS)
+```
+
+<a href="https://www.youtube.com/watch?v=DtGrdB8wQ_8"></a>
 
 
