@@ -23,8 +23,13 @@
 |18.| Strnstr| Looks for a string inside a source string and returns the string if found inside the source string|
 |19.| Split | Splits the strings into different positions| 
 |20.| Strdup | duplicates the string from the source to the destination |
-
-
+|21.| Strjoin | Joins both the source and destination string into another string (malloc) |
+|22.| Strlcat | Returns both the source and destination string concatination, but with restrictions | 
+|23.| Strlcpy| Basically copies the source string to destination string but with a limitation of "how much to copy" |
+|24.| Strtrim | Removes the string from the start and end, specified by the user| 
+|25.| Substr | Subtracts the string given the parameters by the user. “We are going home” we specify where the index starting position is and we also assing n value to return that much of the string. Lets say start = 3 and n = 7, the function will return “are g” to be stored into another string(malloc) |
+|26.| Atoi| Converts string to integers value |
+|27.| Itoai | Converts integers to string literal |
 
 
 
