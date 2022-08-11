@@ -46,7 +46,14 @@
 |------|----------|-------------|
 |36. | [Lstnew](Libft/ft_lstnew.c)| Allocates a new node and variable next is initialized to Null| 
 |37.| [Lstadd_front](Libft/ft_lstadd_front.c)| Adds the node new at the beginning of the list | 
-|38.| [Lstsize](Libft/ft_lstsize.c)| Counts the number of nodes in a list | 
+|38.| [Lstsize](Libft/ft_lstsize.c)| Counts the number of nodes in a list |
+|39.| [lstlast](Libft/ft_lstlast.c)| Returns the last node of the list| 
+|40.| [lstadd_back](Libft/ft_lstadd_back.c)| Adds the node new at the end of the list |
+|41.| [lstdelone](Libft/ft_lstdelone.c)| Free the node content using the delete and the next must not be freed|
+|42.| [lstclear](Libft/ft_lstclear.c)| Deletes and frees the given node and every successor of that node, using the del and free|
+|43.| [lstiter](Libft/ft_lstiter.c)| Iterates the list list and applies the function f on the content of each node. 
+|44.| [lstmap](Libft/ft_lstmap.c)| Creates a new list and applies the function of the f on the content of each node. The del function is used to delete the content of a node if needed.|
+
 
 
 
