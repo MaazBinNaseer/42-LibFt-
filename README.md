@@ -3,9 +3,9 @@
 
 | S.No | Function | Description | 
 |------|----------|-------------|
-| 1.| isAlnum | Checks whether the string has alphabets and numbers; if true returns 1|
-| 2.| isAlpha | Read the string: If there is alphabets- it should return the value of 1 |
-| 3.| isAscii | Returns 1 if c is an ASCII character; otherwise, zero |
+| 1.| [isAlnum](Libft/ft_isalnum.c) | Checks whether the string has alphabets and numbers; if true returns 1|
+| 2.| [isAlpha](Libft/ft_isalpha.c) | Read the string: If there is alphabets- it should return the value of 1 |
+| 3.| [isAscii](Libft/ft_isascii.c) | Returns 1 if c is an ASCII character; otherwise, zero |
 | 4.| isDigit| Function isdigit() takes a single argument in the form of an integer and returns the value of type int|
 | 5.| isPrint| Returns 1 if the characet is printable| 
 | 6.| Bzero| Sets everything to zero |
