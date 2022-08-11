@@ -34,7 +34,11 @@
 |28.| [ToUpper](Libft/ft_toupper.c)| Converts the character to uppercase|
 |29.| [ToLower](Libft/ft_tolower.c)| Converts the character to lowercase|
 |30.| [Strmapi](Libft/ft_strmapi.c)| Change the character using the (f) function|
-
+|31.| [Striteri](Libft/ft_striteri.c)| Changing the character through (f) function|
+|32.| [Putchar_fd](Libft/ft_putchar_fd.c)| Outputs the character c to the given file descriptor| 
+|33.| [Putstr_fd](Libft/ft_putstr_fd.c)| Outputs the string to the given file descriptor |
+|34.| [Putendl_fd](Libft/ft_putendl_fd.c)| Outputs a string to the file descriptor but ends with a newline|
+|35.| [Putnbr_fd](Libft/ft_putnbr_fd.c)| Outputs the integer n to given file descriptor 
 
 
 
