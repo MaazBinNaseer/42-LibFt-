@@ -11,12 +11,12 @@
 | 6.| [Bzero](Libft/ft_bzero.c)| Sets everything to zero |
 | 7.| [Calloc](Libft/ft_calloc.c)| Allocates memory and sets the memory that has been allocated to zero|
 | 8.| [Memcmp](Libft/ft_cmemcmp.c)| It checks for strings and returns the difference, it also checks for null space|
-| 9.| Memcpy| Copies all the data from the **source** to the **destination** | 
-|10.| Memset| Fills the block of memory or the string to a particular value |
-|11.| Memmove | Moves everythin from the **source** to the **destination**, handles overlap which memcpy cannot |
-|12.| Memchr | It will look for a character inside the string and returns character from that position of the character|
-|13.| Strchr | Looks for a specific character inside the string and returns the string from that character position | 
-|14.| Strrchr | Looks for a specific character but the last character inside that string and returns that character/string|
+| 9.| [Memcpy](Libft/ft_memcpy.c)| Copies all the data from the **source** to the **destination** | 
+|10.| [Memset](Libft/ft_memset.c)| Fills the block of memory or the string to a particular value |
+|11.| [Memmove](Libft/ft_memmove.c) | Moves everythin from the **source** to the **destination**, handles overlap which memcpy cannot |
+|12.| [Memchr](Libft/ft_memchr.c) | It will look for a character inside the string and returns character from that position of the character|
+|13.| [Strchr](Libft/ft_strchr.c) | Looks for a specific character inside the string and returns the string from that character position | 
+|14.| [Strrchr](Libft/ft_strrchr.c) | Looks for a specific character but the last character inside that string and returns that character/string|
 |15.| [Strlen](Libft/ft_strlen.c) | Returns the string length | 
 |16.| [Strncmp](Libft/ft_strncmp.c)| Compares not more than n characters. If found a difference within the n value, it will return the difference|
 |17.| [Strrstr](Libft/ft_strrstr.c)| Returns the character inside the string where it last occured |
