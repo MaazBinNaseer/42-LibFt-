@@ -57,7 +57,7 @@
 --- 
 ## THINGS TO READ ABOUT 
 
-### MAKEFILE
+## MAKEFILE
 
 <p align="center">
 <img src= "https://user-images.githubusercontent.com/88405217/184244154-60f36c2b-ecb4-4c91-8044-2444367b03a8.jpg">
