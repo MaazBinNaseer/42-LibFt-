@@ -29,7 +29,7 @@
 |24.| Strtrim | Removes the string from the start and end, specified by the user| 
 |25.| Substr | Subtracts the string given the parameters by the user. “We are going home” we specify where the index starting position is and we also assing n value to return that much of the string. Lets say start = 3 and n = 7, the function will return “are g” to be stored into another string(malloc) |
 |26.| [Atoi](Libft/ft_atoi.c)   | Converts string to integers value |
-|27.| Itoai | Converts integers to string literal |
+|27.| [Itoai](Libft/ft_itoai.c)  | Converts integers to string literal |
 
 
 
