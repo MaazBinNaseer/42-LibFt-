@@ -1,7 +1,7 @@
 # 42-LibFt-
 ## :books: Creating our own library folder from start
 
-### MANDATORY PART 
+### :exclamation: MANDATORY PART 
 | S.No | **Function** | **Description** | 
 |------|----------|-------------|
 | 1.| [isAlnum](Libft/ft_isalnum.c) | Checks whether the string has alphabets and numbers; if true returns 1|
