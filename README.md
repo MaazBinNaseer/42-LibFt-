@@ -41,7 +41,7 @@
 |35.| [Putnbr_fd](Libft/ft_putnbr_fd.c)| Outputs the integer n to given file descriptor 
 
 ---
-### BONUS PART 
+### ✔️ BONUS PART 
 | S.No | **Function** | **Description** | 
 |------|----------|-------------|
 |36. | [Lstnew](Libft/ft_lstnew.c)| Allocates a new node and variable next is initialized to Null| 
@@ -112,7 +112,8 @@ CFILES= $(wildcard ./*.c) //Gets all the .c files in the directory and stores it
 $(NAME): $(OBJECTS)
 	ar -rcs $(NAME) $(OBJECTS)
 ```
+#### 📹 Markdown tutorial 
+[![MARKDOWN TUTORIAL](http://img.youtube.com/vi/DtGrdB8wQ_8/0.jpg)](https://www.youtube.com/watch?v=DtGrdB8wQ_8)
 
-<a href="https://www.youtube.com/watch?v=DtGrdB8wQ_8"></a>
 
 
