@@ -1,5 +1,6 @@
 # 42-LibFt- 
-![image](https://user-images.githubusercontent.com/88405217/192701681-4ed74a77-859f-4993-a71f-57328145951c.png)
+![image](https://user-images.githubusercontent.com/88405217/192701681-4ed74a77-859f-4993-a71f-57328145951c.png) ![image](https://user-images.githubusercontent.com/88405217/192702080-69faa195-e289-4b99-90c7-c02f712c02f3.png)
+
 ## :books: Creating our own library folder from start
 
 ### :exclamation: MANDATORY PART 
