@@ -16,6 +16,9 @@
 # include <limits.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <stdint.h>
+# include "get_next_line.h"
+# include "get_next_line_bonus.h"
 
 /*------------MAIN STRUCTURE LIST ----------*/
 typedef struct s_list
